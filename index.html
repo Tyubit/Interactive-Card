@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  
+  <div class="container">
+    <div class="credit-card">
+      <div class="cc-front">
+        <img src="./images/card-logo.svg" alt="logo" class="logo">
+        <div class="cc-number">0000 0000 0000 0000</div>
+
+        <div class="cardholder-xpt">
+          <div class="cardholder">Jane Appleseed</div>
+          <div class="exp">
+            <span class="mm">MM</span>
+            <span>/</span>
+            <span class="yy">YY</span>
+          </div>
+        </div>
+      </div>
+      <div class="cc-back">
+        <p class="cvc-text">000</p>
+      </div>
+    </div>
+    
+    <div class="cc-form">
+      <h5>Cardholder Name</h5>
+      <input type="text" class="name input" id="name-inp" placeholder="e.g. Jane Appleseed">
+      <span class="name-error error">Cant be number</span>
+      <h5>Card Number</h5>
+      <input type="number" class="card-number input" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+      <span class="number-error error">Cant be blank</span>
+      <div class="exp-date-cvc">
+        <div class="exp-date">
+          <h5>Exp. Date (MM/YY)</h5>
+          <div class="mm-yy">
+            <input type="number" class="month input" placeholder="MM">
+            <input type="number" class="year input" placeholder="YY">
+          </div>
+          <span class="exp-error error">Cant be blank</span>
+        </div>
+    
+        <div class="cvc">
+          <h5>CVC</h5>
+          <input type="number" class="cvc input" id="cvc-inp" max="3" placeholder="e.g. 123">
+        </div>
+      </div>
+    
+      <div class="confirm-btn" onclick="confirmBtn()">Confirm</div>
+      <span class="confirm-error error">Please fill the form</span>
+    </div>
+
+    <div class="added-card">
+      <img src="./images/icon-complete.svg" alt="complete">
+      <h1>Thank you!</h1>
+      <h4>We've added your card details</h4>
+      <div class="continue-btn">Continue</div>
+    </div>
+  </div>
+</body>
+<script src="./scrip/data.js"></script>
+<script src="/scrip/script.js"></script>
+</html>

@@ -1,0 +1,7 @@
+// let CardsData = [
+//     {
+//         name: ""
+//         number: ""
+        
+//     }
+// ]
